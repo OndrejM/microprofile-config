@@ -1,0 +1,5 @@
+This is a collection of feature candidates (unsorted yet):
+ - can be used in plain Java SE env (discussion on the mailing list)
+ - Config must be accessible in Extensions. Even in BeforeBeanDiscovery (https://github.com/microprofile/microprofile-config/pull/40#issuecomment-275642117[M. Struberg])
+ - Config must be accessible from non CDI code parts like a JPA Listener. Of course also during startup. (https://github.com/microprofile/microprofile-config/pull/40#issuecomment-275642117[M. Struberg])
+ - Config must obviously also be accessible in user code during the normal container runtime (https://github.com/microprofile/microprofile-config/pull/40#issuecomment-275642117[M. Struberg])
