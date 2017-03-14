@@ -18,8 +18,8 @@
 package org.eclipse.microprofile.config.tck;
 
 import javax.enterprise.context.Dependent;
-import javax.enterprise.inject.Instance;
 import javax.inject.Inject;
+import javax.inject.Provider;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 import static org.eclipse.microprofile.config.tck.matchers.AdditionalMatchers.floatCloseTo;
 import static org.eclipse.microprofile.config.tck.testsupport.TestSetup.ensure_property_defined;
@@ -133,15 +133,10 @@ public class CDIPlainInjectionTest {
 
         @Inject
         @ConfigProperty("my.int.property")
-        private Instance<Integer> intPropertyProvider;
+        private Provider<Integer> intPropertyProvider;
 
         public Integer getIntProperty() {
-            if (intPropertyProvider.isUnsatisfied()) {
-                return null;
-            } 
-            else {
-                return intPropertyProvider.get();
-            }
+            return intPropertyProvider.get();
         }
 
     }
