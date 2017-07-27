@@ -63,6 +63,10 @@
             <uniqueVersion>true</uniqueVersion>  <!-- for keeping multipe snapshot versions - maybe for staging a final version besides nightly versions -->
 
         </snapshotRepository>
+        <site>
+            <id>github.eclipse</id>
+            <url>http://eclipse.github.io/microprofile-config</url>
+        </site>
     </distributionManagement>
 
     <modules>
@@ -264,5 +268,35 @@
             <!-- turns on signing of JARs by the Eclipse signer plugin -->
         </profile>
     </profiles>
+    
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.9</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>index</report>
+                            <report>dependency-info</report>
+                            <report>project-team</report>
+                            <report>mailing-list</report>
+                            <report>cim</report>
+                            <report>issue-tracking</report>
+                            <report>scm</report>
+                            <report>distribution-management</report>
+                            <report>license</report>
+                            <report>summary</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </reporting>
 
 </project>
