@@ -1,0 +1,6 @@
+org.eclipse.microprofile.config.tck
+org.eclipse.microprofile.config.tck.base
+org.eclipse.microprofile.config.tck.broken
+org.eclipse.microprofile.config.tck.configsources
+org.eclipse.microprofile.config.tck.converters
+org.eclipse.microprofile.config.tck.matchers
